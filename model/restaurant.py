@@ -11,7 +11,7 @@ class Restaurant():
     self.menu = []
 
   def __repr__(self):
-    return '<Restaurant(name={self.description!r})>'.format(self=self)
+    return '<Restaurant(name={self.name!r})>'.format(self=self)
 
   def addEntree(self, entree):
     self.menu.append(entree)
@@ -22,6 +22,6 @@ class RestaurantSchema(Schema):
   id = fields.Number()
   name = fields.Str()
   city = fields.Str()
-  parking = fields.Bool()
+  parking = fields.Boolean()
   rating = fields.Number()
   menu = fields.Nested(EntreeSchema, many=True)

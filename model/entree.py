@@ -8,11 +8,11 @@ class Entree():
     self.dinner = dinner
 
   def __repr__(self):
-    return '<Entree(name={self.description!r})>'.format(self=self)
+    return '<Entree(name={self.name!r})>'.format(self=self)
 
 
 class EntreeSchema(Schema):
   id = fields.Number()
   name = fields.Str()
   cuisine = fields.Str()
-  dinner = fields.Bool()
+  dinner = fields.Boolean()
